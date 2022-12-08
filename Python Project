@@ -1,0 +1,43 @@
+import random
+def guess():
+    for i in range(3):
+        if i==0:
+            a=int(input("enter your 1st guess."))
+            if a==x:
+                print("congrats u have guessed the right number","score=100")
+                break
+            elif a>x:
+                print("You have two more try.Your guess was too high")
+            elif a<x:
+                print("You have two more try.Your guess was two low")
+            elif a!=x:
+                print("Two more try left.")
+        elif i==1:
+            a=int(input("enter your 2nd guess."))
+            if a==x:
+                print("congrats u have guessed the right number","score=50")
+                break
+            elif a>x:
+                print("You have one more try.Your guess was too high")
+            elif a<x:
+                print("You have one more try.Your guess was too low")
+            elif a!=x:
+                print("have one more try")
+        elif i==2:
+            a=int(input("enter your 3rd guess."))
+            if a==x:
+                print("congrats u have guessed the right number","score=0")
+                break
+            elif a>x:
+                print("Better luck next time.Your guess was too high")
+            elif a<x:
+                print("Better luck next time.Your guess was too low ")
+            elif a!=x:
+                print("better luck next time")
+n=1
+while n==1:
+    a=int(input("enter the starting range"))
+    b=int(input("enter the ending range"))
+    x=random.randint(a,b)
+    guess()
+    n=int(input("want to play more, than enter 1 or enter 0 for exit"))
